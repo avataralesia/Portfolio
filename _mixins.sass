@@ -1,0 +1,45 @@
+@mixin positionFlex()
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin positionFlexCol()
+    display: flex
+    flex-direction: column
+
+@mixin btnGold()
+    cursor: pointer
+    font-family: inherit
+    width: 220px
+    height: 55px
+    border: 0
+    text-align: center
+    background-color: $colorGold
+    color: $colorBgDark
+    transition: 0.3s
+
+@mixin btnGoldHover()
+    background-color: $colorGoldHover
+    color: $colorWhite
+
+@mixin btnDark()
+    cursor: pointer
+    font-family: inherit
+    width: 220px
+    height: 55px
+    border: 2px solid $colorGold
+    background-color: $colorBgDark
+    color: $colorGold
+    transition: 0.3s
+
+@mixin btnDarkHover()
+    background-color: $colorBgDark
+    color: $colorWhite
+
+@mixin titleGold($font-size, $line-height)
+    font-family: Merriweather
+    font-style: normal
+    font-weight: bold
+    font-size: $font-size
+    line-height: $line-height
+    color: $colorGold

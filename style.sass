@@ -1,0 +1,291 @@
+@import mixins
+@import var
+
+@font-face
+  font-family: 'Merriweather'
+  src: url("assets/fonts/Merriweather/Merriweather-Bold.ttf")
+  font-weight: 700
+
+  &
+    font-family: 'Inter'
+    src: url("assets/fonts/Inter/static/Inter-Regular.ttf")
+    font-weight: 400
+
+  &
+    font-family: 'Inter'
+    src: url("assets/fonts/Inter/static/Inter-Bold.ttf")
+    font-weight: 700
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  min-height: 100vh
+  +positionFlexCol
+  font-family: 'Merriweather','Inter', sans-serif
+  background: $colorBgDark
+
+html
+  scroll-behavior: smooth
+
+a
+  text-decoration: none
+
+.container
+  width: 1440px
+  margin: 0 auto
+
+.header-list
+  display: flex
+  padding: 20px
+  background-image: url('./assets/img/bg.jpg')
+  background-repeat: no-repeat
+  background-position: center 0
+
+svg
+  fill: $colorWhite
+  transition: color 0.3s
+
+svg:hover
+  fill: $colorGold
+
+.nav
+  margin-left: auto
+
+.nav-list
+  display: flex
+  list-style: none
+
+.nav-item
+  padding-left: 30px
+
+.nav-item:last-child
+  padding-right: 30px
+
+.nav-link
+  text-decoration: none
+  font-family: Inter
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 50px
+  color: $colorWhite
+  transition: 0.3s
+  &:hover
+    color: $colorGold
+
+.switch-lng
+  font-family: Inter
+  font-style: normal
+  font-weight: bold
+  font-size: 20px
+  line-height: 50px
+  text-align: center
+  color: $colorWhite
+  transition: 0.3s
+
+.hero
+  background-image: url('./assets/img/bg.jpg')
+  background-repeat: no-repeat
+  background-position: center -90px
+  padding-top: 160px
+
+.hero-info
+  width: 500px
+  padding-left: 80px
+  padding-bottom: 330px
+
+h1
+  font-family: Merriweather
+  font-style: normal
+  font-weight: bold
+  font-size: 60px
+  line-height: 120px
+  color: $colorWhite
+
+.hero-text
+  font-family: Inter
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 40px
+  padding-bottom: 25px
+  color: $colorWhite
+
+.btnGold
+  +btnGold
+  &:hover
+    +btnGoldHover
+
+.skills
+
+.wrap-title
+  text-align: center
+  width: 50%
+  margin: 0 auto
+  background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px)
+
+.section-title
+  +titleGold(40px, 80px)
+  margin-top: 100px
+  margin-bottom: 60px
+
+.section-title_bg
+  background-color: #000000
+  padding: 0 20px
+
+.skills-items
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.skill-item
+  background-position: center top
+  background-repeat: no-repeat
+  width: 320px
+  padding-top: 100px
+  background-size: 62px 50px
+
+  &:nth-child(1)
+    background-image: url('./assets/svg/camera.svg')
+  &:nth-child(2)
+    background-image: url('./assets/svg/video.svg')
+  &:nth-child(3)
+    background-image: url('./assets/svg/image.svg')
+  &:nth-child(4)
+    background-image: url('./assets/svg/mic.svg')
+
+.text-Inter_normal
+  font-family: Inter
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 36px
+  text-align: center
+  color: $colorWhite
+
+.text-Inter_normal_bold
+  font-family: Inter
+  font-style: normal
+  font-weight: bold
+  font-size: 20px
+  line-height: 40px
+  text-align: center
+  color: $colorWhite
+
+.portfolio
+
+.portfolio-btns
+  display: flex
+  justify-content: center
+  gap: 5px
+  padding-bottom: 60px
+
+.btnDark
+  +btnDark
+  &:hover
+    +btnDarkHover
+  &:active
+    background-color: $colorGold
+
+.portfolio-img
+  display: flex
+  flex-wrap: wrap
+  gap: 25px
+
+.video-player
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+.video-button
+  position: absolute
+  &:hover
+    fill: $colorGold
+
+.price
+  padding-bottom: 100px
+
+.price-carts
+  display: flex
+  justify-content: space-between
+
+.price-cart
+  display: block
+  text-align: center
+  width: 450px
+  height: 505px
+  padding-top: 43px
+  border: 3px solid $colorGold
+  box-sizing: border-box
+  border-radius: 0px
+
+.price-title
+  font-family: Merriweather
+  font-style: normal
+  font-weight: bold
+  font-size: 28px
+  line-height: 56px
+  text-align: center
+  color: #FFFFFF
+
+.price-total
+  +titleGold(24px, 48px)
+  text-align: center
+
+.price-wrap_text
+  padding: 20px 0 43px 0
+
+.contacts
+  display: flex
+  justify-content: flex-end
+  background-image: url('./assets/img/contacts-bg.jpg')
+  /*background-size: auto 700px
+  height: 700px
+  background-repeat: no-repeat
+  background-position: center
+
+.contacts-form
+  display: flex
+  flex-direction: column
+  padding-top: 60px
+  width: 450px
+
+.contact-title
+  +titleGold(40px, 80px)
+
+.input-text
+  font-family: Inter
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 40px
+  border: 2px solid $colorGold
+  box-sizing: border-box
+  border-radius: 0px
+  background-color: transparent
+  color: $colorGold
+  &:nth-last-child(3)
+    height: 100px
+
+.input-text::placeholder
+  font-family: inherit
+  padding-left: 20px
+  color: #bdae82
+  font-size: 20px
+
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 150px
+
+.footer-item
+  font-family: Inter
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 50px
+  color: $colorWhite
